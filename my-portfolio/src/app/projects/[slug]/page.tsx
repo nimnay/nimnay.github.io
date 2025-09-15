@@ -185,13 +185,13 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
               transition={{ duration: 0.8, delay: 0.2 }}
               className="lg:sticky lg:top-24"
             >
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <div className="rounded-2xl overflow-hidden shadow-2xl relative">
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                   priority
                 />
               </div>

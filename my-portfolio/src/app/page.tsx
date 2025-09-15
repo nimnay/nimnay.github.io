@@ -1,8 +1,8 @@
 "use client";
 
 import Link from 'next/link';
-import Image from 'next/image';
 import Sidebar from '@/components/Sidebar';
+import Image from 'next/image';
 import { motion, PanInfo } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -281,8 +281,8 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl font-bold mb-5 font-mono"
           >
-            <Image src="/name.png" alt="Your Name" width={800} height={160} className='w-100'/>
-            <Image src="/name2.png" alt="Waving Hand" width={900} height={180} className='w-120 mt-3'/>
+            <Image src="/name.png" alt="Your Name" width={800} height={160} className='w-100' />
+            <Image src="/name2.png" alt="Waving Hand" width={900} height={180} className='w-120 mt-3' />
            
           </motion.h1>
           <motion.p 
@@ -291,10 +291,10 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xs md:text-xs text-gray-500 mb-7 leading-relaxed tracking-wider font-sans"
           >
-            Hi! I&#39;m a computer science student at Clemson University.
-            At heart, I&#39;m a creator who loves both math and art. CS lets me live in both worlds 
+            Hi! I&apos;m a computer science student at Clemson University.
+            At heart, I9m a creator who loves both math and art. CS lets me live in both worlds 
             — the logic and precision of math paired with the creativity of design. 
-            I&#39;m driven by the idea of building things that are both functional and beautiful.
+            I9m driven by the idea of building things that are both functional and beautiful.
           </motion.p>
           
         </div>
@@ -326,8 +326,8 @@ export default function Home() {
                 <Link href={`/experience/${job.slug}`}>
                   <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform">
                     <div className="aspect-[6/3] bg-gray-100 overflow-hidden">
-                      <Image 
-                        src={job.image} 
+                      <Image
+                        src={job.image}
                         alt={job.title}
                         fill
                         sizes="(max-width: 1024px) 100vw, 33vw"
@@ -367,8 +367,8 @@ export default function Home() {
                 <Link href={`/experience/${job.slug}`}>
                   <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform">
                     <div className="aspect-[5/3] bg-gray-100 overflow-hidden">
-                      <Image 
-                        src={job.image} 
+                      <Image
+                        src={job.image}
                         alt={job.title}
                         fill
                         sizes="(max-width: 1024px) 100vw, 50vw"
@@ -405,7 +405,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold mb-12 text-center font-mono uppercase tracking-[0.12em]"
           >
-            Skills &amp; Technologies
+            Skills & Technologies
           </motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -606,7 +606,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold mb-5 font-mono uppercase tracking-[0.12em]"
           >
-            Let&#39;s Connect
+            Let&apos;s Connect
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
@@ -614,8 +614,8 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto"
           >
-            I&#39;m always excited to discuss new ideas, opportunities, and collaborations. 
-            Whether you have a project in mind or just want to chat about technology, I&#39;d love to hear from you.
+            I&apos;m always excited to discuss new ideas, opportunities, and collaborations. 
+            Whether you have a project in mind or just want to chat about technology, I&apos;d love to hear from you.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}

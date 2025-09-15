@@ -249,7 +249,7 @@ export default function ExperiencePage({ params }: { params: Promise<{ slug: str
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="lg:sticky lg:top-24"
                         >
-                            <div className="rounded-2xl overflow-hidden shadow-2xl">
+                            <div className="rounded-2xl overflow-hidden shadow-2xl relative">
                                 <Image
                                     src={experience.image}
                                     alt={experience.title}
