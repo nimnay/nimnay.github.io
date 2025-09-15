@@ -165,17 +165,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                 </ul>
               </div>
 
-              {/* Links */}
-              <div className="flex gap-4 pt-8">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition duration-300"
-                >
-                  View Code
-                </a>
-              </div>
+              
             </motion.div>
 
             {/* Right Side - Image */}

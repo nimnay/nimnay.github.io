@@ -270,7 +270,7 @@ export default function Home() {
       ))}
       
       {/* Main Content Area - with left margin to clear sidebar */}
-      <div className="ml-52 pr-6">
+      <div className="ml-52 pr-6 relative z-10">
       
       {/* Hero Section */}
       <section id="about" className="flex items-center min-h-screen">
@@ -292,9 +292,9 @@ export default function Home() {
             className="text-xs md:text-xs text-gray-500 mb-7 leading-relaxed tracking-wider font-sans"
           >
             Hi! I&apos;m a computer science student at Clemson University.
-            At heart, I9m a creator who loves both math and art. CS lets me live in both worlds 
+            At heart, I am a creator who loves both math and art. CS lets me live in both worlds 
             — the logic and precision of math paired with the creativity of design. 
-            I9m driven by the idea of building things that are both functional and beautiful.
+            I am driven by the idea of building things that are both functional and beautiful.
           </motion.p>
           
         </div>
@@ -302,7 +302,7 @@ export default function Home() {
 
 
       {/* Experience Section */}
-      <section id="work" className="py-20">
+      <section id="work" className="py-20 relative z-10">
         <div className="max-w-6xl w-full mx-auto text-left px-6">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
@@ -324,8 +324,8 @@ export default function Home() {
                 className="group cursor-pointer"
               >
                 <Link href={`/experience/${job.slug}`}>
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform">
-                    <div className="aspect-[6/3] bg-gray-100 overflow-hidden">
+                  <div className="bg-transparent rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform">
+                    <div className="aspect-[6/3] bg-gray-100 overflow-hidden relative">
                       <Image
                         src={job.image}
                         alt={job.title}
@@ -365,8 +365,8 @@ export default function Home() {
                 className="group cursor-pointer"
               >
                 <Link href={`/experience/${job.slug}`}>
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform">
-                    <div className="aspect-[5/3] bg-gray-100 overflow-hidden">
+                  <div className="bg-transparent rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform">
+                    <div className="aspect-[5/3] bg-gray-100 overflow-hidden relative">
                       <Image
                         src={job.image}
                         alt={job.title}
@@ -397,7 +397,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section  id="skills" className="py-20  bg-gray-50">
+      <section  id="skills" className="py-20 ">
     <div className="max-w-4xl w-full mx-auto text-left">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
@@ -408,16 +408,16 @@ export default function Home() {
             Skills & Technologies
           </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((skillGroup, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-5 rounded-xl shadow-lg"
+                className=" bg-white p-5 rounded-xl shadow-lg "
               >
-                <h3 className="text-lg font-semibold mb-3 text-center">{skillGroup.category}</h3>
+                <h3 className=" text-lg font-semibold mb-3 text-center">{skillGroup.category}</h3>
                 <div className="space-y-2">
                   {skillGroup.technologies.map((tech, techIndex) => (
                     <div 
@@ -435,7 +435,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-gray-50">
+      <section id="projects" className="py-20  relative z-10">
         <div className="max-w-6xl w-full mx-auto text-left px-6">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
@@ -457,7 +457,7 @@ export default function Home() {
             >
               <Link href="/projects/my-ai-advisor">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform">
-                  <div className="aspect-[5/3] bg-gray-100 overflow-hidden">
+                  <div className="aspect-[5/3] bg-gray-100 overflow-hidden relative">
                     <Image 
                       src="/aws.png" 
                       alt="My AI Advisor"
@@ -493,7 +493,7 @@ export default function Home() {
             >
               <Link href="/projects/extended-checkers-game">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform">
-                  <div className="aspect-[5/3] bg-gray-100 overflow-hidden">
+                  <div className="aspect-[5/3] bg-gray-100 overflow-hidden relative">
                     <Image 
                       src="/chess.png" 
                       alt="Extended Checkers Game"
@@ -529,7 +529,7 @@ export default function Home() {
             >
               <Link href="/projects/ai-nlp-terminal">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform">
-                  <div className="aspect-[5/3] bg-gray-100 overflow-hidden">
+                  <div className="aspect-[5/3] bg-gray-100 overflow-hidden relative">
                     <Image 
                       src="/terminal.png" 
                       alt="AI-powered NLP Terminal"
@@ -567,7 +567,7 @@ export default function Home() {
             >
               <Link href="/projects/clemson-event-ticketing">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform">
-                  <div className="aspect-[5/3] bg-gray-100 overflow-hidden">
+                  <div className="aspect-[5/3] bg-gray-100 overflow-hidden relative">
                     <Image 
                       src="/react.png" 
                       alt="Clemson Campus Event Ticketing System"
