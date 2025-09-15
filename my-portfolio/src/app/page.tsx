@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Sidebar from '@/components/Sidebar';
-import { motion } from "framer-motion";
+import { motion, PanInfo } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -238,7 +238,7 @@ export default function Home() {
           style={{
             filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.2))'
           }}
-          onDrag={(event: any, info: any) => {
+          onDrag={(event: PointerEvent, info: PanInfo) => {
             // Update clip position in state
             setClips(prevClips => 
               prevClips.map(c => 
