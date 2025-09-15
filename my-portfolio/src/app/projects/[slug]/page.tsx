@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { motion } from "framer-motion";
-import { useState, useEffect, use } from "react";
+import { use } from "react";
+import Image from 'next/image';
 
 // Project data
 const projects = {
@@ -185,10 +186,13 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
               className="lg:sticky lg:top-24"
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={1200}
+                  height={800}
                   className="w-full h-auto object-cover"
+                  priority
                 />
               </div>
             </motion.div>

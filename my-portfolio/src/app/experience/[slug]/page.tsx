@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { use } from 'react';
+import Image from 'next/image';
 
 // Experience data
 const experiences = {
@@ -249,10 +250,13 @@ export default function ExperiencePage({ params }: { params: Promise<{ slug: str
                             className="lg:sticky lg:top-24"
                         >
                             <div className="rounded-2xl overflow-hidden shadow-2xl">
-                                <img
+                                <Image
                                     src={experience.image}
                                     alt={experience.title}
+                                    width={1200}
+                                    height={800}
                                     className="w-full h-auto object-cover"
+                                    priority
                                 />
                             </div>
                         </motion.div>
