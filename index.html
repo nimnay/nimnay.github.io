@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nimra Nayyar · AI/ML Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background-color: #8FC5E7;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E"),
+      repeating-linear-gradient(90deg,
+        #8FC5E7 0 52px,
+        #9DCDEC 52px 60px,
+        #F4EDDC 60px 70px,
+        #9DCDEC 70px 78px);
+    background-size: 180px 180px, auto;
+    background-attachment: fixed, fixed;
+    color: #26221B;
+    font-family: 'Newsreader', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: #1F5C99; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: rgba(31,92,153,0.4); }
+  a:hover { color: #E4502F; text-decoration-color: #E4502F; }
+  ::selection { background: #FBD9A2; }
+  :focus-visible { outline: 2px solid #E4502F; outline-offset: 3px; }
+  @media (max-width: 700px) {
+    [data-card] { padding-left: 24px !important; padding-right: 24px !important; }
+    [data-inner] { padding-left: 24px !important; padding-right: 24px !important; }
+    [data-row] { flex-direction: column !important; align-items: flex-start !important; gap: 3px !important; }
+    [data-two] { grid-template-columns: 1fr !important; }
+    [data-stats] { grid-template-columns: 1fr 1fr !important; }
+    [data-navbar] { flex-direction: column !important; align-items: flex-start !important; gap: 2px !important; padding: 8px 0 !important; }
+    [data-navlinks] { flex-wrap: wrap !important; gap: 2px 14px !important; }
+    [data-navlinks] > a { min-height: 40px; display: flex !important; align-items: center; }
+    [data-hero] { font-size: 34px !important; }
+    [data-frog] { width: 84px !important; right: 14px !important; }
+  }
+</style>
+</helmet>
+
+<div id="top" style="min-height:100vh;padding:0 20px 64px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:26px">
+
+<nav style="position:sticky;top:0;z-index:20;width:100%;display:flex;justify-content:center;background:rgba(143,197,231,0.86);backdrop-filter:blur(7px);margin:0 -20px 0;padding:0 20px">
+  <div data-navbar="true" style="width:100%;max-width:760px;height:46px;display:flex;align-items:center;justify-content:space-between;gap:18px">
+    <a href="#top" onClick="{{ goHome }}" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;text-decoration:none;color:#123E63">NIMRA NAYYAR</a>
+    <div data-navlinks="true" style="display:flex;align-items:center;gap:18px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em">
+      <a href="#work" onClick="{{ goWork }}" style="text-decoration:none;color:#1B4E7C" style-hover="color:#B23015">WORK</a>
+      <a href="#research" onClick="{{ goResearch }}" style="text-decoration:none;color:#1B4E7C" style-hover="color:#B23015">RESEARCH</a>
+      <a href="#writing" onClick="{{ goWriting }}" style="text-decoration:none;color:#1B4E7C" style-hover="color:#B23015">WRITING</a>
+      <a href="#about" onClick="{{ goAbout }}" style="text-decoration:none;color:#1B4E7C" style-hover="color:#B23015">ABOUT</a>
+    </div>
+  </div>
+</nav>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+
+  <div data-card="true" style="width:100%;max-width:760px;box-sizing:border-box;background:#FFFAEC;box-shadow:0 14px 30px rgba(24,50,72,0.22);padding:0 0 38px;margin-top:34px;overflow:hidden">
+    <div style="height:13px;background:#E4502F;background-image:repeating-linear-gradient(90deg,#E4502F 0 11px,#FFFAEC 11px 19px)"></div>
+    <div data-inner="true" style="padding:40px 56px 0;position:relative">
+      <img src="frog.png" alt="" data-frog="true" style="position:absolute;right:34px;bottom:-6px;width:132px;height:auto;pointer-events:none" />
+      <header style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:24px">
+        <div>
+          <h1 data-hero="true" style="font-size:40px;font-weight:600;line-height:1.04;margin:0 0 10px;letter-spacing:-0.015em">Nimra<br>Nayyar</h1>
+          <p style="font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:0.16em;color:#B23015;margin:0">SOFTWARE + AI ENGINEER</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px;padding-top:8px">
+          <div style="width:30px;height:30px;background:#1F5C99"></div>
+          <div style="width:30px;height:9px;background:#6FA84B"></div>
+        </div>
+      </header>
+      <p style="font-size:17.5px;line-height:1.62;margin:0 0 20px;color:#2F2B22;max-width:520px;text-wrap:pretty">
+        Aspiring ML engineer. Building software and research systems at the intersection of AI, machine learning, and the real world.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;color:#6B6039;margin-bottom:22px">
+        <span>NVIDIA</span><span style="color:#C7BDA4">·</span><span>TD SYNNEX</span><span style="color:#C7BDA4">·</span><span>CLEMSON</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em">
+        <a href="https://github.com/nimnay" style="text-decoration:none;border:1px solid #1F5C99;padding:6px 11px" style-hover="background:#1F5C99;color:#FFFAEC">GITHUB</a>
+        <a href="https://linkedin.com/in/nimranayyar" style="text-decoration:none;border:1px solid #1F5C99;padding:6px 11px" style-hover="background:#1F5C99;color:#FFFAEC">LINKEDIN</a>
+        <a href="mailto:nimranayyar05@gmail.com" style="text-decoration:none;border:1px solid #1F5C99;padding:6px 11px" style-hover="background:#1F5C99;color:#FFFAEC">EMAIL</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="work" data-card="true" style="width:100%;max-width:760px;box-sizing:border-box;background:#FFFAEC;box-shadow:0 14px 30px rgba(24,50,72,0.22);padding:40px 56px;scroll-margin-top:60px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
+      <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0;white-space:nowrap">SELECTED WORK</h2>
+      <div style="flex:1;height:2px;background:#F6DDB0"></div>
+    </div>
+
+    <article style="margin-bottom:16px">
+      <a href="#vantage" onClick="{{ goVantage }}" style="display:block;text-decoration:none;color:inherit;border:1px solid #E8DEC5;background:#FFFDF6;padding:16px 18px 18px;transition:border-color 160ms,box-shadow 160ms,transform 160ms" style-hover="border-color:#E4502F;box-shadow:0 10px 22px rgba(24,50,72,0.13);transform:translateY(-2px)">
+        <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.16em;color:#8A7F62;margin:0 0 12px">01 · RESEARCH + ENGINEERING</p>
+        <div style="background:#F1EADA;margin-bottom:18px">
+          <img src="gtc-keynote.png" alt="VANTAGE-Bench on screen during NVIDIA's GTC Taipei 2026 keynote" style="display:block;width:100%;height:225px;object-fit:cover;object-position:center 42%" />
+        </div>
+        <div data-row="true" style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:8px">
+          <h3 style="font-size:22px;font-weight:500;margin:0">VANTAGE-Bench</h3>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#6B6039;white-space:nowrap">NVIDIA × CLEMSON</span>
+        </div>
+        <p style="font-size:16.5px;line-height:1.62;margin:0 0 20px;color:#37332A;max-width:480px;text-wrap:pretty">
+          An open benchmark for evaluating vision-language models on fixed-camera operational video, spanning eight tasks across four reasoning pillars.
+        </p>
+        <p style="margin:0;padding-top:18px;border-top:1px solid #F0E6CF;font-size:16px;line-height:1.6;color:#37332A">
+          <span style="font-weight:500">35K+</span> annotations <span style="color:#C7BDA4">·</span>
+          <span style="font-weight:500">3.3K+</span> media assets <span style="color:#C7BDA4">·</span>
+          <span style="font-weight:500">12K+</span> HF downloads
+        </p>
+        <p style="font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:0.11em;color:#B23015;margin:20px 0 0">FEATURED IN NVIDIA'S GTC TAIPEI KEYNOTE</p>
+        <div style="margin-top:18px;display:flex;justify-content:flex-end">
+          <span style="display:inline-flex;align-items:center;gap:8px;border:1px solid #E4502F;color:#B23015;padding:7px 12px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em">READ CASE STUDY <span>→</span></span>
+        </div>
+      </a>
+    </article>
+
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <a href="#tdsynnex" onClick="{{ goTd }}" style="display:block;box-sizing:border-box;text-decoration:none;color:inherit;border:1px solid #E8DEC5;background:#FFFDF6;padding:26px 28px 24px;transition:border-color 160ms,box-shadow 160ms,transform 160ms" style-hover="border-color:#E4502F;box-shadow:0 12px 26px rgba(24,50,72,0.14);transform:translateY(-2px)">
+        <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.16em;color:#8A7F62;margin:0 0 12px">02 · PRODUCTION SOFTWARE ENGINEERING</p>
+        <div data-row="true" style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:8px">
+          <h3 style="font-size:22px;font-weight:500;margin:0">Production AI Systems</h3>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#6B6039;white-space:nowrap">TD SYNNEX</span>
+        </div>
+        <p style="font-size:16.5px;line-height:1.62;margin:0 0 20px;max-width:520px;color:#37332A;text-wrap:pretty">
+          Two summers shipping AI systems inside a Fortune 100 distributor: enterprise RAG across five knowledge bases, then multi-agent email triage owned from taxonomy discovery through deployment.
+        </p>
+        <div data-stats="true" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-top:18px;border-top:1px solid #F0E6CF">
+          <div><div style="font-size:19px;font-weight:500;line-height:1;margin-bottom:5px">600K</div><div style="font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:0.12em;color:#7A6F53">EMAILS / YEAR</div></div>
+          <div><div style="font-size:19px;font-weight:500;line-height:1;margin-bottom:5px">SECONDS</div><div style="font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:0.12em;color:#7A6F53">SLA · FROM ~60 MIN</div></div>
+          <div><div style="font-size:19px;font-weight:500;line-height:1;margin-bottom:5px">5</div><div style="font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:0.12em;color:#7A6F53">KNOWLEDGE BASES</div></div>
+          <div><div style="font-size:19px;font-weight:500;line-height:1;margin-bottom:5px">K8S</div><div style="font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:0.12em;color:#7A6F53">MCP · AZURE · NIM</div></div>
+        </div>
+        <p style="font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:0.11em;color:#B23015;margin:20px 0 0">FEATURED AT TD SYNNEX INSPIRE 2025</p>
+        <div style="margin-top:18px;display:flex;justify-content:flex-end">
+          <span style="display:inline-flex;align-items:center;gap:8px;border:1px solid #E4502F;color:#B23015;padding:7px 12px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em">READ CASE STUDY <span>→</span></span>
+        </div>
+      </a>
+      <a href="#promptpact" onClick="{{ goPromptpact }}" style="display:block;box-sizing:border-box;text-decoration:none;color:inherit;border:1px solid #E8DEC5;background:#FFFDF6;padding:24px 26px;transition:border-color 160ms,box-shadow 160ms,transform 160ms" style-hover="border-color:#E4502F;box-shadow:0 10px 22px rgba(24,50,72,0.13);transform:translateY(-2px)">
+        <div data-row="true" style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:8px">
+          <h3 style="font-size:20px;font-weight:500;margin:0">promptpact</h3>
+          <span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.12em;color:#8A7F62;white-space:nowrap">03 · OPEN SOURCE</span>
+        </div>
+        <p style="font-size:16px;line-height:1.64;margin:0 0 16px;max-width:560px;color:#37332A;text-wrap:pretty">
+          Behavioral regression testing for LLM prompts. Diffs at the check level, so a regression names the behavior that broke instead of flagging every reword.
+        </p>
+        <div data-row="true" style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:16px;border-top:1px solid #F0E6CF">
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#37332A"><span style="font-weight:600">5</span> check types <span style="color:#C7BDA4">·</span> <span style="font-weight:600">3</span> providers <span style="color:#C7BDA4">·</span> <span style="font-weight:600">pass-rate</span> diffs <span style="color:#C7BDA4">·</span> <span style="font-weight:600">MCP</span> in progress</p>
+          <span style="display:inline-flex;align-items:center;gap:8px;flex:none;border:1px solid #E4502F;color:#B23015;padding:6px 11px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.14em">CASE STUDY <span>→</span></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="research" data-card="true" style="width:100%;max-width:760px;box-sizing:border-box;background:#F6F2E4;box-shadow:0 14px 30px rgba(24,50,72,0.22);padding:40px 56px;border-top:5px solid #6FA84B;scroll-margin-top:60px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+      <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#5C7A32;font-weight:500;margin:0;white-space:nowrap">RESEARCH</h2>
+      <div style="flex:1;height:2px;background:#DDE3C8"></div>
+    </div>
+    <div data-two="true" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <article>
+          <a href="#poster-audiogram" onClick="{{ goPosterAudiogram }}" style="display:flex;flex-direction:column;height:100%;box-sizing:border-box;text-decoration:none;color:inherit;border:1px solid #DED5BE;background:#FDFBF4;padding:16px;transition:border-color 160ms,box-shadow 160ms,transform 160ms" style-hover="border-color:#6FA84B;box-shadow:0 12px 26px rgba(38,34,27,0.12);transform:translateY(-2px)">
+            <div style="background:#EAE6D4;margin-bottom:14px">
+              <img src="poster-audiogram.png" alt="Poster: Deep learning-based extraction of structured data from scanned audiograms in the electronic health record" style="display:block;width:100%;height:auto" />
+            </div>
+            <h3 style="font-size:16.5px;font-weight:500;line-height:1.32;margin:0 0 8px">Deep Learning–Based Extraction of Structured Data from Scanned Audiograms in the EHR</h3>
+            <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#6B6039;margin:0 0 12px">WATT AI × MUSC · CLEMSON · 2026</p>
+            <p style="font-size:15px;line-height:1.55;margin:0 0 14px;color:#3F3A2E;text-wrap:pretty">Computer vision · document AI · clinical data</p>
+            <p style="margin:auto 0 0;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.11em;color:#7A6F53">88.4% VLM ACCURACY &nbsp;<span style="color:#5C7A32">VIEW POSTER →</span></p>
+          </a>
+        </article>
+        <article>
+          <a href="#poster-social" onClick="{{ goPosterSocial }}" style="display:flex;flex-direction:column;height:100%;box-sizing:border-box;text-decoration:none;color:inherit;border:1px solid #DED5BE;background:#FDFBF4;padding:16px;transition:border-color 160ms,box-shadow 160ms,transform 160ms" style-hover="border-color:#6FA84B;box-shadow:0 12px 26px rgba(38,34,27,0.12);transform:translateY(-2px)">
+            <div style="background:#EAE6D4;margin-bottom:14px">
+              <img src="poster-social-media.png" alt="Poster: Frame extraction and labelling of social media posts" style="display:block;width:100%;height:auto" />
+            </div>
+            <h3 style="font-size:16.5px;font-weight:500;line-height:1.32;margin:0 0 8px">Frame Extraction and Labelling of Social Media Posts</h3>
+            <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#6B6039;margin:0 0 12px">WATT AI · MEDIA FORENSICS HUB · 2025</p>
+            <p style="font-size:15px;line-height:1.55;margin:0 0 14px;color:#3F3A2E;text-wrap:pretty">Multimodal LLMs · embeddings · clustering</p>
+            <p style="margin:auto 0 0;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.11em;color:#7A6F53">154 VIDEOS EVALUATED &nbsp;<span style="color:#5C7A32">VIEW POSTER →</span></p>
+          </a>
+        </article>
+    </div>
+  </section>
+
+  <section id="writing" data-card="true" style="width:100%;max-width:760px;box-sizing:border-box;background:#FFFAEC;box-shadow:0 14px 30px rgba(24,50,72,0.22);padding:40px 56px;scroll-margin-top:60px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+      <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0;white-space:nowrap">WRITING &amp; PRESS</h2>
+      <div style="flex:1;height:2px;background:#F6DDB0"></div>
+    </div>
+    <p style="font-size:15.5px;line-height:1.55;color:#6B6039;margin:0 0 20px;font-style:italic">Coverage of work I've been part of, and things I've written.</p>
+
+    <div style="display:flex;flex-direction:column">
+      <p style="margin:0 0 6px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;color:#B23015">2026</p>
+      <a href="https://blogs.clemson.edu/cecas/vantage-bench-evaluating-vision-language-models-in-real-world-operational-environments/" style="display:block;text-decoration:none;color:inherit;padding:13px 0;border-top:1px solid #F0E6CF" style-hover="background:#FDF6E4">
+        <div style="font-size:17px;font-weight:500;margin-bottom:4px">VANTAGE-Bench: evaluating vision-language models in real-world operational environments</div>
+        <p style="margin:0;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.11em;color:#7A6F53">FEATURE · CLEMSON CECAS</p>
+      </a>
+      <a href="https://blogs.clemson.edu/cecas/keeping-pace-with-physical-ai-expanding-vantage-bench-with-the-latest-generation-of-edge-vision-language-models/" style="display:block;text-decoration:none;color:inherit;padding:13px 0;border-top:1px solid #F0E6CF" style-hover="background:#FDF6E4">
+        <div style="font-size:17px;font-weight:500;margin-bottom:4px">Keeping pace with physical AI: expanding VANTAGE-Bench with the latest edge vision-language models</div>
+        <p style="margin:0;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.11em;color:#7A6F53">FEATURE · CLEMSON CECAS</p>
+      </a>
+      <a href="https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3/" style="display:block;text-decoration:none;color:inherit;padding:13px 0;border-top:1px solid #F0E6CF" style-hover="background:#FDF6E4">
+        <div style="font-size:17px;font-weight:500;margin-bottom:4px">Develop physical AI reasoning, world and action models with NVIDIA Cosmos 3</div>
+        <p style="margin:0;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.11em;color:#7A6F53">CITATION · NVIDIA DEVELOPER BLOG</p>
+      </a>
+      <a href="https://blogs.nvidia.com/blog/open-world-models-physical-ai/" style="display:block;text-decoration:none;color:inherit;padding:13px 0;border-top:1px solid #F0E6CF" style-hover="background:#FDF6E4">
+        <div style="font-size:17px;font-weight:500;margin-bottom:4px">Open world models for physical AI</div>
+        <p style="margin:0;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.11em;color:#7A6F53">COVERAGE · NVIDIA BLOG</p>
+      </a>
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7485084039398264832/" style="display:block;text-decoration:none;color:inherit;padding:13px 0;border-top:1px solid #F0E6CF" style-hover="background:#FDF6E4">
+        <div style="font-size:17px;font-weight:500;margin-bottom:4px">VANTAGE-Bench featured in the GTC Taipei keynote</div>
+        <p style="margin:0;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.11em;color:#7A6F53">POST · LINKEDIN</p>
+      </a>
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7467356273613783040/" style="display:block;text-decoration:none;color:inherit;padding:13px 0;border-top:1px solid #F0E6CF" style-hover="background:#FDF6E4">
+        <div style="font-size:17px;font-weight:500;margin-bottom:4px">Clemson College of Engineering &amp; Science on VANTAGE-Bench</div>
+        <p style="margin:0;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.11em;color:#7A6F53">POST · LINKEDIN</p>
+      </a>
+      <p style="margin:22px 0 0 0 6px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;color:#B23015">2025</p>
+      <a href="https://www.tdsynnex.com/na/us/destination-ai/ai-pioneer-solutions/knode/" style="display:block;text-decoration:none;color:inherit;padding:13px 0;border-top:1px solid #F0E6CF" style-hover="background:#FDF6E4">
+        <div style="font-size:17px;font-weight:500;margin-bottom:4px">Knode, TD SYNNEX's enterprise RAG solution</div>
+        <p style="margin:0;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.11em;color:#7A6F53">PRODUCT PAGE · TD SYNNEX</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="projects" data-card="true" style="width:100%;max-width:760px;box-sizing:border-box;background:#FFFAEC;box-shadow:0 14px 30px rgba(24,50,72,0.22);padding:40px 56px;scroll-margin-top:60px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
+      <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0;white-space:nowrap">OTHER PROJECTS</h2>
+      <div style="flex:1;height:2px;background:#F6DDB0"></div>
+    </div>
+    <div data-two="true" style="display:grid;grid-template-columns:1fr 1fr;gap:26px 24px">
+      <article>
+        <div data-row="true" style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:6px">
+          <h3 style="font-size:17.5px;font-weight:500;margin:0"><a href="https://github.com/nimnay/NASASpaceApps-WildfireResponseAgent">AeroGuard</a></h3>
+          <span style="font-family:'DM Mono',monospace;font-size:9.5px;color:#8A7F62">2025</span>
+        </div>
+        <p style="font-size:16px;line-height:1.64;margin:0;color:#3F3A2E;text-wrap:pretty">
+          Wildfire and air-quality response platform on NASA TEMPO data, with LSTM forecasting, incident reporting, and an agent that gives evacuation guidance. <span style="font-style:italic">Global Impact winner, NASA Space Apps at Clemson.</span>
+        </p>
+      </article>
+      <article>
+        <div data-row="true" style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:6px">
+          <h3 style="font-size:17.5px;font-weight:500;margin:0"><a href="https://github.com/nimnay/MyAICourseAdvisor">AI Advisor</a></h3>
+          <span style="font-family:'DM Mono',monospace;font-size:9.5px;color:#8A7F62">2025</span>
+        </div>
+        <p style="font-size:16px;line-height:1.64;margin:0;color:#3F3A2E;text-wrap:pretty">
+          Course scheduling assistant built on Claude 3 Sonnet via AWS Bedrock, reasoning over a course knowledge base of prerequisites, co-requisites, and time slots to produce conflict-free 16&ndash;18 credit schedules. <span style="font-style:italic">Best Use of AWS, CUHackit 2025.</span>
+        </p>
+      </article>
+      <article>
+        <div data-row="true" style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:6px">
+          <h3 style="font-size:17.5px;font-weight:500;margin:0"><a href="https://github.com/nimnay/TigerTix">TigerTix</a></h3>
+          <span style="font-family:'DM Mono',monospace;font-size:9.5px;color:#8A7F62">2025</span>
+        </div>
+        <p style="font-size:16px;line-height:1.64;margin:0;color:#3F3A2E;text-wrap:pretty">
+          Campus event ticketing for Clemson students: discovery, accounts, and purchase in one flow.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section data-card="true" style="width:100%;max-width:760px;box-sizing:border-box;background:#FFFAEC;box-shadow:0 14px 30px rgba(24,50,72,0.22);padding:40px 56px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+      <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0;white-space:nowrap">EXPERIENCE</h2>
+      <div style="flex:1;height:2px;background:#F6DDB0"></div>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div data-row="true" style="display:flex;gap:24px;align-items:baseline;padding:11px 0;border-bottom:1px solid #F0E6CF">
+        <span style="font-family:'DM Mono',monospace;font-size:10px;color:#8A7F62;width:74px;flex:none">2026 &ndash;</span>
+        <span style="font-size:17px;font-weight:500;flex:1">AI/ML Engineer</span>
+        <span style="font-size:16px;color:#5F5643;font-style:italic">Clemson Capstone with NVIDIA</span>
+      </div>
+      <div data-row="true" style="display:flex;gap:24px;align-items:baseline;padding:11px 0;border-bottom:1px solid #F0E6CF">
+        <span style="font-family:'DM Mono',monospace;font-size:10px;color:#8A7F62;width:74px;flex:none">2026</span>
+        <span style="font-size:17px;font-weight:500;flex:1">Software Engineer Intern, AI Systems</span>
+        <span style="font-size:16px;color:#5F5643;font-style:italic">TD SYNNEX</span>
+      </div>
+      <div data-row="true" style="display:flex;gap:24px;align-items:baseline;padding:11px 0;border-bottom:1px solid #F0E6CF">
+        <span style="font-family:'DM Mono',monospace;font-size:10px;color:#8A7F62;width:74px;flex:none">2026</span>
+        <span style="font-size:17px;font-weight:500;flex:1">Lead Student Researcher</span>
+        <span style="font-size:16px;color:#5F5643;font-style:italic">Clemson Watt AI × MUSC</span>
+      </div>
+      <div data-row="true" style="display:flex;gap:24px;align-items:baseline;padding:11px 0;border-bottom:1px solid #F0E6CF">
+        <span style="font-family:'DM Mono',monospace;font-size:10px;color:#8A7F62;width:74px;flex:none">2025</span>
+        <span style="font-size:17px;font-weight:500;flex:1">Software Engineer Intern, AI Systems</span>
+        <span style="font-size:16px;color:#5F5643;font-style:italic">TD SYNNEX</span>
+      </div>
+      <div data-row="true" style="display:flex;gap:24px;align-items:baseline;padding:11px 0;border-bottom:1px solid #F0E6CF">
+        <span style="font-family:'DM Mono',monospace;font-size:10px;color:#8A7F62;width:74px;flex:none">2025</span>
+        <span style="font-size:17px;font-weight:500;flex:1">Lead Student Researcher</span>
+        <span style="font-size:16px;color:#5F5643;font-style:italic">Clemson Watt AI × Media Forensics Hub</span>
+      </div>
+      <div data-row="true" style="display:flex;gap:24px;align-items:baseline;padding:11px 0;border-bottom:1px solid #F0E6CF">
+        <span style="font-family:'DM Mono',monospace;font-size:10px;color:#8A7F62;width:74px;flex:none">2024 &ndash; 25</span>
+        <span style="font-size:17px;font-weight:500;flex:1">Software QA</span>
+        <span style="font-size:16px;color:#5F5643;font-style:italic">Eleos Technology</span>
+      </div>
+      <div data-row="true" style="display:flex;gap:24px;align-items:baseline;padding:11px 0">
+        <span style="font-family:'DM Mono',monospace;font-size:10px;color:#8A7F62;width:74px;flex:none">2023 &ndash; 26</span>
+        <span style="font-size:17px;font-weight:500;flex:1">B.S. Computer Science, minor in AI</span>
+        <span style="font-size:16px;color:#5F5643;font-style:italic">Clemson University</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" data-card="true" style="width:100%;max-width:760px;box-sizing:border-box;background:#FFFAEC;box-shadow:0 14px 30px rgba(24,50,72,0.22);padding:40px 56px;scroll-margin-top:60px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+      <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0;white-space:nowrap">ABOUT</h2>
+      <div style="flex:1;height:2px;background:#F6DDB0"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;font-size:16.5px;line-height:1.66;color:#2F2B22">
+      <p style="margin:0;text-wrap:pretty">
+        I'm a software engineer drawn to the product side of applied ML: deciding what a system should actually do, then building it well enough that people can rely on it. That has meant a benchmark and evaluation service for vision-language models with NVIDIA, retrieval and multi-agent triage in production at TD SYNNEX, computer vision research through Clemson's Watt AI program, and open-source tooling when nothing existed to answer the question I had.
+      </p>
+    </div>
+  </section>
+</sc-if>
+
+<sc-if value="{{ isVantage }}" hint-placeholder-val="{{ false }}">
+  <div data-card="true" style="width:100%;max-width:760px;box-sizing:border-box;background:#FFFAEC;box-shadow:0 14px 30px rgba(24,50,72,0.22);padding:0 0 40px;margin-top:34px;overflow:hidden">
+    <div style="height:13px;background:#E4502F;background-image:repeating-linear-gradient(90deg,#E4502F 0 11px,#FFFAEC 11px 19px)"></div>
+    <div data-inner="true" style="padding:34px 56px 0">
+      <a href="#top" onClick="{{ goHome }}" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-decoration:none;color:#6B6039" style-hover="color:#B23015">← ALL WORK</a>
+      <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;color:#B23015;margin:26px 0 14px">NVIDIA × CLEMSON · BENCHMARK · 2026</p>
+      <h1 style="font-size:34px;font-weight:600;line-height:1.08;letter-spacing:-0.02em;margin:0 0 16px">VANTAGE-Bench</h1>
+      <p style="font-size:17.5px;line-height:1.62;color:#37332A;margin:0 0 22px;text-wrap:pretty">
+        An open benchmark for vision-language models on fixed-camera operational video, built with NVIDIA, used to evaluate their Cosmos 3 models, and actively expanding into 3D spatial reasoning.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em">
+        <a href="https://vantage-bench.org/" style="text-decoration:none;border:1px solid #1F5C99;padding:6px 11px" style-hover="background:#1F5C99;color:#FFFAEC">SITE</a>
+        <a href="https://huggingface.co/datasets/nvidia/PhysicalAI-VANTAGE-Bench" style="text-decoration:none;border:1px solid #1F5C99;padding:6px 11px" style-hover="background:#1F5C99;color:#FFFAEC">DATASET</a>
+        <a href="https://github.com/Clemson-Capstone/VANTAGE-Bench" style="text-decoration:none;border:1px solid #1F5C99;padding:6px 11px" style-hover="background:#1F5C99;color:#FFFAEC">CODE</a>
+        <a href="https://huggingface.co/spaces/clemson-computing/VANTAGE-Bench-Leaderboard" style="text-decoration:none;border:1px solid #1F5C99;padding:6px 11px" style-hover="background:#1F5C99;color:#FFFAEC">LEADERBOARD</a>
+      </div>
+
+      <figure style="margin:0 0 34px">
+        <div style="background:#F1EADA;border:1px solid #E8DEC5">
+          <img src="vantage-tasks.png" alt="VANTAGE-Bench task taxonomy: semantic, temporal, spatial, and spatio-temporal understanding examples" style="display:block;width:100%;height:auto" />
+        </div>
+        <figcaption style="margin-top:9px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:0.11em;color:#7A6F53">EIGHT TASKS ACROSS FOUR REASONING PILLARS</figcaption>
+      </figure>
+
+      <div style="display:flex;flex-direction:column;gap:30px">
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">PROBLEM</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">Vision-language models are evaluated almost entirely on curated, web-scraped imagery. Physical AI deployments look nothing like that: a fixed camera, a fixed scene, long stretches of nothing, and the thing you actually care about happening at the <span style="font-weight:600">edge of the frame</span>. Existing benchmarks weren't built to measure whether a model can reason about that footage the way an operator does.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">MY CONTRIBUTION</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">The work spans the benchmark end to end: extending a fork of VLMEvalKit into the <span style="font-weight:600">distributed evaluation service</span> that runs every task, and building the pseudo-labeling pipelines, dataloaders, and model inference paths feeding it. The <span style="font-weight:600">public site, leaderboard, and submission portal</span> are mine to build and maintain, along with the support that comes with them: submission debugging, format questions, and adding models as they land.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">Dataset and task expansion runs alongside that: deciding what gets measured next, specifying it, and building the data behind it.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">
+            <span style="font-weight:600">Single-object tracking I owned outright</span>: annotation specification, metric definition, dataset construction, and baselines. Existing tracking benchmarks assume systems that carry explicit state frame to frame, so the task needed reformulating for how VLMs actually run: <span style="font-weight:600">one instruction, one pass, a full trajectory out</span>, with metrics that separate <span style="font-style:italic">tracked badly</span> from <span style="font-style:italic">didn't track at all</span>. Building the data meant recovering object identities from footage annotated with detections only, with models proposing inside constraints and human labels defining ground truth, so a pipeline error could affect what was inferred, never the underlying annotation.
+          </p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty"><span style="font-weight:600">Getting that spec right mattered more than the modeling.</span> Ambiguous instructions produce annotations that disagree with each other, and a benchmark built on disagreement measures nothing.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">ARCHITECTURE</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">Three stages, deliberately decoupled so a change in one doesn't invalidate the others.</p>
+          <div style="display:flex;flex-direction:column;gap:1px;background:#EFE5CE;border:1px solid #EFE5CE;margin-top:4px">
+            <div style="background:#FDF7E7;padding:14px 18px"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.13em;color:#8A7F62;margin-bottom:5px">STAGE 1 · GROUND TRUTH</div><div style="font-size:16px">Annotation spec → expert labeling → pseudo-labeling pipeline → dataloaders</div></div>
+            <div style="background:#FDF7E7;padding:14px 18px"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.13em;color:#8A7F62;margin-bottom:5px">STAGE 2 · EVALUATION</div><div style="font-size:16px">Forked VLMEvalKit → distributed inference workers → per-task metrics</div></div>
+            <div style="background:#FDF7E7;padding:14px 18px"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.13em;color:#8A7F62;margin-bottom:5px">STAGE 3 · PUBLICATION</div><div style="font-size:16px">Submission portal → validation → public leaderboard</div></div>
+          </div>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">DATASET</h2>
+          <p style="margin:0 0 14px;font-size:16px;line-height:1.7;color:#332F26">
+            <span style="font-weight:600">35,027</span> expert annotations <span style="color:#C7BDA4">·</span>
+            <span style="font-weight:600">3,346</span> media assets <span style="color:#C7BDA4">·</span>
+            <span style="font-weight:600">8 / 4</span> tasks / pillars
+          </p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">Eight tasks span four reasoning pillars, so <span style="font-weight:600">a model can't score well by being good at one kind of question</span>. Everything is public on Hugging Face, with 12k+ downloads to date.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">EVALUATION & RESULTS</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">The evaluation service runs frontier and open models against every task under identical conditions and publishes per-pillar breakdowns rather than a single number. Where a model falls off is more useful than its average.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">Holding the model fixed and changing only the footage, semantic question answering barely moves while grounding collapses: roughly <span style="font-weight:600">30 points</span> on causal event verification, <span style="font-weight:600">24</span> on spatial pointing. The models still understand what they're seeing. They've lost the ability to say <span style="font-weight:600">precisely where and when</span>.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty"><span style="font-weight:600">Scale doesn't close it.</span> Quadrupling parameters within one model family improved high-level reasoning meaningfully and spatial precision almost not at all, which points at architecture and training priors rather than capacity.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">NVIDIA used the benchmark to evaluate Cosmos 3 in their technical report.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">IMPACT</h2>
+          <div style="display:flex;flex-direction:column;gap:9px;font-size:16.5px;line-height:1.58;color:#332F26">
+            <div style="display:flex;gap:12px"><span style="color:#B23015;flex:none">·</span><span>Featured in the GTC Taipei keynote.</span></div>
+            <div style="display:flex;gap:12px"><span style="color:#B23015;flex:none">·</span><span>Used to evaluate NVIDIA's Cosmos 3 models in their technical report.</span></div>
+            <div style="display:flex;gap:12px"><span style="color:#B23015;flex:none">·</span><span>12k+ dataset downloads, with an open leaderboard accepting external submissions.</span></div>
+          </div>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">IN PROGRESS</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">VANTAGE-Bench is a <span style="font-weight:600">live benchmark</span>, not a finished artifact. The current expansion adds <span style="font-weight:600">3D reasoning</span>, moving beyond image-plane coordinates to grounding in metric space, where a model has to reason about depth and real-world geometry rather than pixel positions. It's the capability that matters most for physical deployment and one the benchmark doesn't yet cover.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">New tasks and data are landing continuously, with the leaderboard and evaluation service built to absorb them without re-running what's already scored.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">LESSONS</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty"><span style="font-weight:600">Annotation design is benchmark design.</span> Most of the quality in this project gets decided before any model runs, in how precisely the task is specified and how disagreement between annotators is resolved. The engineering that follows is comparatively mechanical, and <span style="font-weight:600">that's the right ratio</span>.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ isTd }}" hint-placeholder-val="{{ false }}">
+  <div data-card="true" style="width:100%;max-width:760px;box-sizing:border-box;background:#FFFAEC;box-shadow:0 14px 30px rgba(24,50,72,0.22);padding:0 0 40px;margin-top:34px;overflow:hidden">
+    <div style="height:13px;background:#E4502F;background-image:repeating-linear-gradient(90deg,#E4502F 0 11px,#FFFAEC 11px 19px)"></div>
+    <div data-inner="true" style="padding:34px 56px 0">
+      <a href="#top" onClick="{{ goHome }}" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-decoration:none;color:#6B6039" style-hover="color:#B23015">← ALL WORK</a>
+      <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;color:#B23015;margin:26px 0 14px">TD SYNNEX · PRODUCTION AI · 2025&ndash;2026</p>
+      <h1 style="font-size:34px;font-weight:600;line-height:1.08;letter-spacing:-0.02em;margin:0 0 16px">Production AI Systems</h1>
+      <p style="font-size:17.5px;line-height:1.62;color:#37332A;margin:0 0 22px;text-wrap:pretty">
+        Two summers building AI systems at one of the world's largest technology distributors: an enterprise RAG platform, then a multi-agent triage system for sales operations.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em">
+        <a href="https://www.tdsynnex.com/na/us/destination-ai/ai-pioneer-solutions/knode/" style="text-decoration:none;border:1px solid #1F5C99;padding:6px 11px" style-hover="background:#1F5C99;color:#FFFAEC">KNODE · PRODUCT PAGE</a>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:30px">
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">PROBLEM</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">Sales operations received roughly <span style="font-weight:600">600,000 emails a year</span> that had to be read, classified, and routed by hand. SLA times could approach an hour, while inconsistent request categories made reliable automation difficult.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">Separately, product and process knowledge lived across five disconnected knowledge bases, with no shared way to query documents and structured business data through one interface.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">ROLE</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty"><span style="font-weight:600">2025, enterprise RAG.</span> Built a multi-tenant RAG platform on NVIDIA's RAG Blueprint, unifying retrieval across five knowledge bases.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty"><span style="font-weight:600">2026, multi-agent triage.</span> Returned to build the email automation system across product definition, architecture, development, and deployment, including the taxonomy discovery underlying classification.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">SANITIZED ARCHITECTURE</h2>
+          <div style="display:flex;flex-direction:column;gap:1px;background:#EFE5CE;border:1px solid #EFE5CE;margin-bottom:16px">
+            <div style="background:#FDF7E7;padding:14px 18px"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.13em;color:#8A7F62;margin-bottom:5px">RETRIEVAL</div><div style="font-size:16px">Document ingestion → retrieval → reranking → generation</div></div>
+            <div style="background:#FDF7E7;padding:14px 18px"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.13em;color:#8A7F62;margin-bottom:5px">TRIAGE</div><div style="font-size:16px">Mailbox → normalization → classification → extraction → routing</div></div>
+            <div style="background:#FDF7E7;padding:14px 18px"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.13em;color:#8A7F62;margin-bottom:5px">RUNTIME</div><div style="font-size:16px">NVIDIA NIM → containerized services → Kubernetes</div></div>
+          </div>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">The two systems share the same design philosophy: separate stages, explicit contracts, and controlled failure modes. The RAG platform supports both unstructured document retrieval and structured-data queries, while the triage system uses independent services coordinated through MCP.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">ENGINEERING</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty"><span style="font-weight:600">Most of the work was making the systems trustworthy rather than clever.</span></p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">Idempotent ingestion prevents duplicate work. Guardrails fail closed. Tenant isolation is enforced at the data layer. Structured outputs are validated before downstream actions. Confidence thresholds determine when automation can act independently; ambiguous cases remain in the human loop.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">IMPACT</h2>
+          <div data-stats="true" style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:16px">
+            <div><div style="font-size:22px;font-weight:500;line-height:1;margin-bottom:6px">SECONDS</div><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:#7A6F53">SLA TIMES · FROM ~60 MIN</div></div>
+            <div><div style="font-size:22px;font-weight:500;line-height:1;margin-bottom:6px">600K</div><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:#7A6F53">EMAILS / YEAR</div></div>
+            <div><div style="font-size:22px;font-weight:500;line-height:1;margin-bottom:6px">5</div><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:#7A6F53">KNOWLEDGE BASES</div></div>
+            <div><div style="font-size:22px;font-weight:500;line-height:1;margin-bottom:6px">2,000+</div><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:#7A6F53">ATTENDEES AT INSPIRE 2025</div></div>
+          </div>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">The RAG platform was featured at TD SYNNEX's Inspire 2025, the company's annual conference attended by technology leaders and partners from across the industry.</p>
+        </section>
+        <section style="background:#F6F2E4;border-left:4px solid #6FA84B;padding:18px 20px">
+          <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#5C7A32;font-weight:500;margin:0 0 10px">CONFIDENTIALITY</h2>
+          <p style="font-size:16px;line-height:1.62;margin:0;color:#4A4536;text-wrap:pretty">
+            This is a sanitized account. Internal system names, schemas, vendor-specific workflows, and proprietary implementation details are omitted. Architecture is described only at a level appropriate for public discussion.
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ isPromptpact }}" hint-placeholder-val="{{ false }}">
+  <div data-card="true" style="width:100%;max-width:760px;box-sizing:border-box;background:#FFFAEC;box-shadow:0 14px 30px rgba(24,50,72,0.22);padding:0 0 40px;margin-top:34px;overflow:hidden">
+    <div style="height:13px;background:#E4502F;background-image:repeating-linear-gradient(90deg,#E4502F 0 11px,#FFFAEC 11px 19px)"></div>
+    <div data-inner="true" style="padding:34px 56px 0">
+      <a href="#top" onClick="{{ goHome }}" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-decoration:none;color:#6B6039" style-hover="color:#B23015">← ALL WORK</a>
+      <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;color:#B23015;margin:26px 0 14px">OPEN SOURCE · DEVELOPER TOOLING · 2026</p>
+      <h1 style="font-size:34px;font-weight:600;line-height:1.08;letter-spacing:-0.02em;margin:0 0 16px">promptpact</h1>
+      <p style="font-size:17.5px;line-height:1.62;color:#37332A;margin:0 0 22px;text-wrap:pretty">
+        Behavioral regression testing for LLM prompts. Declare the behaviors a prompt must satisfy, capture a known-good baseline, and get a <span style="font-weight:600">check-level</span> signal after any prompt or model change, not an aggregate similarity score that flags every harmless reword.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em">
+        <a href="https://github.com/nimnay/promptpact" style="text-decoration:none;border:1px solid #1F5C99;padding:6px 11px" style-hover="background:#1F5C99;color:#FFFAEC">GITHUB</a>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:30px">
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">PROBLEM</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">LLM output is non-deterministic, so a plain text diff on prompt output is useless: it flags constant false positives (every rewording looks like a change) while potentially missing the one dropped behavior that actually mattered. Prompt changes are code changes with no test suite.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">promptpact diffs at the level of the behaviors you declared, so a regression report means <span style="font-weight:600">"the order-number check broke,"</span> not "the wording changed."</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">DESIGN</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">A case is an input, an optional system prompt, and a list of named checks. <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">baseline</span> runs the case while the prompt is known-good and saves the result as the reference; <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">diff</span> re-runs it and reports which specific checks regressed. Re-running <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">baseline</span> over an existing one refuses to overwrite without <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">--force</span>, so a reference can't be silently lost.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">Because output is stochastic, <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">--samples N</span> draws N outputs per case and each check reports a pass <span style="font-weight:600">rate</span> rather than a single pass/fail. <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">diff</span> then flags a regression when the rate drops by more than <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">--threshold</span> (default 0.20), rather than when one draw happens to differ.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">CHECKS</h2>
+          <div style="display:flex;flex-direction:column;gap:1px;background:#EFE5CE;border:1px solid #EFE5CE">
+            <div style="display:grid;grid-template-columns:1.1fr 0.7fr 1.9fr;gap:14px;padding:10px 18px;background:#F6EFDC;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:#8A7F62">
+              <span>CHECK</span><span>FIELD</span><span>FAILS WHEN</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1.1fr 0.7fr 1.9fr;gap:14px;padding:11px 18px;background:#FDF7E7;font-size:15px;align-items:baseline">
+              <span style="font-family:'DM Mono',monospace;font-size:13px">contains</span>
+              <span style="font-family:'DM Mono',monospace;font-size:13px;color:#7A6F53">text</span>
+              <span style="color:#3F3A2E">output does not include the exact string</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1.1fr 0.7fr 1.9fr;gap:14px;padding:11px 18px;background:#FDF7E7;font-size:15px;align-items:baseline">
+              <span style="font-family:'DM Mono',monospace;font-size:13px">not_contains</span>
+              <span style="font-family:'DM Mono',monospace;font-size:13px;color:#7A6F53">text</span>
+              <span style="color:#3F3A2E">output includes the exact string</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1.1fr 0.7fr 1.9fr;gap:14px;padding:11px 18px;background:#FDF7E7;font-size:15px;align-items:baseline">
+              <span style="font-family:'DM Mono',monospace;font-size:13px">regex</span>
+              <span style="font-family:'DM Mono',monospace;font-size:13px;color:#7A6F53">pattern</span>
+              <span style="color:#3F3A2E">output does not match the pattern</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1.1fr 0.7fr 1.9fr;gap:14px;padding:11px 18px;background:#FDF7E7;font-size:15px;align-items:baseline">
+              <span style="font-family:'DM Mono',monospace;font-size:13px">max_sentences</span>
+              <span style="font-family:'DM Mono',monospace;font-size:13px;color:#7A6F53">count</span>
+              <span style="color:#3F3A2E">output has more sentences than the count</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1.1fr 0.7fr 1.9fr;gap:14px;padding:11px 18px;background:#FDF7E7;font-size:15px;align-items:baseline">
+              <span style="font-family:'DM Mono',monospace;font-size:13px">llm_judge</span>
+              <span style="font-family:'DM Mono',monospace;font-size:13px;color:#7A6F53">criterion</span>
+              <span style="color:#3F3A2E">a judge model's verdict on the criterion is FAIL</span>
+            </div>
+          </div>
+          <p style="font-size:16.5px;line-height:1.66;margin:14px 0 0;color:#332F26;text-wrap:pretty">
+            <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">llm_judge</span> sends the target's output to a judge model inside clearly delimited blocks explicitly labeled as data, so the output can't hijack the judge prompt. With <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">--judge-samples &gt; 1</span> the judge is called repeatedly and a majority vote decides; a tie is reported <span style="font-weight:600">INCONCLUSIVE</span>, never silently resolved either way.
+          </p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">ARCHITECTURE</h2>
+          <div style="display:flex;flex-direction:column;gap:1px;background:#EFE5CE;border:1px solid #EFE5CE">
+            <div style="background:#FDF7E7;padding:14px 18px"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.13em;color:#8A7F62;margin-bottom:5px">CASES</div><div style="font-size:16px">Versioned YAML: input, system prompt, named checks, suite tags</div></div>
+            <div style="background:#FDF7E7;padding:14px 18px"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.13em;color:#8A7F62;margin-bottom:5px">RUNNER</div><div style="font-size:16px">Target provider call (optionally N samples) → per-check evaluation</div></div>
+            <div style="background:#FDF7E7;padding:14px 18px"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.13em;color:#8A7F62;margin-bottom:5px">BASELINE</div><div style="font-size:16px">Reference results on disk, overwrite-protected</div></div>
+            <div style="background:#FDF7E7;padding:14px 18px"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.13em;color:#8A7F62;margin-bottom:5px">DIFF</div><div style="font-size:16px">Re-run → compare check results or pass rates → regression report</div></div>
+            <div style="background:#FDF7E7;padding:14px 18px"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.13em;color:#8A7F62;margin-bottom:5px">PROVIDERS</div><div style="font-size:16px">Anthropic · OpenAI · Ollama, independently selectable for target and judge</div></div>
+          </div>
+          <p style="font-size:16.5px;line-height:1.66;margin:14px 0 0;color:#332F26;text-wrap:pretty">
+            Target and judge are independent, overridable slots. Precedence runs per-case field → CLI flag → project config default, and the judge falls back to the target's provider only when nothing more specific is set.
+          </p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">CLI</h2>
+          <div style="background:#26221B;color:#F2EBDA;padding:18px 20px;font-family:'DM Mono',monospace;font-size:13px;line-height:1.8;overflow-x:auto">
+            <div style="color:#9A9078">$ promptpact baseline --case order-number</div>
+            <div style="margin-top:4px">saved reference · 2 checks</div>
+            <div style="margin-top:12px;color:#9A9078">$ promptpact diff --case order-number   <span style="color:#6E6857"># cosmetic reword</span></div>
+            <div><span style="color:#8FBF6A">no regressions</span></div>
+            <div style="margin-top:12px;color:#9A9078">$ promptpact diff --case order-number   <span style="color:#6E6857"># instruction removed</span></div>
+            <div><span style="color:#E5714F">[order-number] REGRESSED contains</span> (baseline=True, current=False)</div>
+          </div>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">TECHNICAL DECISIONS</h2>
+          <div style="display:flex;flex-direction:column;gap:9px;font-size:16.5px;line-height:1.58;color:#332F26">
+            <div style="display:flex;gap:12px"><span style="color:#B23015;flex:none">·</span><span>Checks are independent and named, so one flaky behavior can't mask another and a failure is something you can act on.</span></div>
+            <div style="display:flex;gap:12px"><span style="color:#B23015;flex:none">·</span><span>Cases are versioned YAML, not code, so a prompt's contract is reviewable in a pull request.</span></div>
+            <div style="display:flex;gap:12px"><span style="color:#B23015;flex:none">·</span><span>Sampling and thresholds are first-class, because a single draw is not evidence about a stochastic system.</span></div>
+            <div style="display:flex;gap:12px"><span style="color:#B23015;flex:none">·</span><span>Destructive actions stay human-only: <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">baseline --force</span> is deliberately unreachable from the agent-facing interface.</span></div>
+          </div>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">STATUS</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">Early and under active development. Working today: <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">init</span>, <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">add</span>, <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">baseline</span>, <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">run</span>, <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">diff</span>, all five check types, three providers, and sampling-based robustness for both target and judge. <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">doctor</span> and <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">mcp-serve</span>, which will expose <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">run</span>, <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">diff</span>, and <span style="font-family:'DM Mono',monospace;font-size:14.5px;background:#F6EFDC;padding:1px 5px">list_cases</span> to coding agents over MCP, are stubs in progress. Python 3.11+.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#B23015;font-weight:500;margin:0 0 12px">LESSONS</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">The hard part wasn't the runner. It was accepting that "the output changed" is not a useful signal. Once failure had a name, the tool stopped being a diff viewer and became a test suite.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ isPosterAudiogram }}" hint-placeholder-val="{{ false }}">
+  <div data-card="true" style="width:100%;max-width:760px;box-sizing:border-box;background:#F6F2E4;box-shadow:0 14px 30px rgba(24,50,72,0.22);padding:0 0 40px;margin-top:34px;overflow:hidden;border-top:5px solid #6FA84B">
+    <div data-inner="true" style="padding:34px 56px 0">
+      <a href="#research" onClick="{{ goResearch }}" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-decoration:none;color:#6B6039" style-hover="color:#5C7A32">← ALL RESEARCH</a>
+      <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;color:#5C7A32;margin:26px 0 14px">WATT AI × MUSC · CLEMSON UNIVERSITY · 2026</p>
+      <h1 style="font-size:27px;font-weight:600;line-height:1.18;letter-spacing:-0.015em;margin:0 0 18px">Deep Learning–Based Extraction of Structured Data from Scanned Audiograms in the Electronic Health Record</h1>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:30px">
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#5F5643;border:1px solid #D2CDB4;padding:5px 9px">COMPUTER VISION</span>
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#5F5643;border:1px solid #D2CDB4;padding:5px 9px">DOCUMENT AI</span>
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#5F5643;border:1px solid #D2CDB4;padding:5px 9px">CLINICAL DATA</span>
+      </div>
+      <div style="background:#EAE6D4;border:1px solid #DBD5BC;margin-bottom:32px">
+        <img src="poster-audiogram.png" alt="Audiogram extraction research poster" style="display:block;width:100%;height:auto" />
+      </div>
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#5C7A32;font-weight:500;margin:0 0 12px">OVERVIEW</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">Hearing-health research is limited by how audiograms are stored: scanned, hand-drawn charts sitting in the electronic health record as images rather than structured fields, unreadable to any analysis that expects a database. In collaboration with MUSC, we built a deep learning pipeline that extracts threshold data from audiograms stored across a tertiary academic health network, combining object detection with calibrated interpolation to convert pixel coordinates into real measurements: <span style="font-weight:600">frequency in Hz, threshold in dB</span>.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">Each audiogram yields 20–25 data points across standard frequencies for both ears, output as JSON for direct EHR integration, turning scanned images into queryable databases for automated hearing-loss classification and longitudinal tracking.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#5C7A32;font-weight:500;margin:0 0 12px">METHOD</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">Six YOLO architectures were benchmarked across two detection tasks and evaluated on mAP@50, mAP@50-95, precision, and recall. <span style="font-weight:600">YOLO11s</span> was selected for axis detection (best balance of speed and accuracy) and <span style="font-weight:600">YOLO11l</span> for symbol detection, prioritizing recall to minimize missed symbols. A three-stage pipeline follows: axis detection extracts calibration markers, symbol detection locates hearing thresholds, and interpolation maps pixel positions into value space: nearest-neighbor on the logarithmic frequency axis, linear on the dB axis.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">A second track evaluated four vision-language models on speech-score detection across 98 images and six categories, comparing instruct against thinking variants. Preprocessing improvements significantly boosted consistency and reduced hallucinated values.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#5C7A32;font-weight:500;margin:0 0 12px">KEY RESULTS</h2>
+          <div data-stats="true" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:14px">
+            <div><div style="font-size:24px;font-weight:500;line-height:1;margin-bottom:6px">99.5%</div><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:#7A6F53">mAP@50 · FREQUENCY MARKERS</div></div>
+            <div><div style="font-size:24px;font-weight:500;line-height:1;margin-bottom:6px">88.4%</div><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:#7A6F53">BEST VLM ACCURACY</div></div>
+            <div><div style="font-size:24px;font-weight:500;line-height:1;margin-bottom:6px">20–25</div><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:#7A6F53">DATA POINTS PER CHART</div></div>
+          </div>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">Qwen3-VL-32B-Instruct reached the highest speech-score accuracy at 88.4%; instruct models outperformed thinking variants with far less processing time. Remaining failure modes are blurred images, unclear handwriting, and misaligned columns.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#5C7A32;font-weight:500;margin:0 0 12px">MY ROLE</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">First author on the poster, presented through Clemson's Watt AI program with MUSC. Work included the detection benchmarking, the calibrated interpolation pipeline, and evaluation on Clemson's Palmetto 2 HPC cluster.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ isPosterSocial }}" hint-placeholder-val="{{ false }}">
+  <div data-card="true" style="width:100%;max-width:760px;box-sizing:border-box;background:#F6F2E4;box-shadow:0 14px 30px rgba(24,50,72,0.22);padding:0 0 40px;margin-top:34px;overflow:hidden;border-top:5px solid #6FA84B">
+    <div data-inner="true" style="padding:34px 56px 0">
+      <a href="#research" onClick="{{ goResearch }}" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-decoration:none;color:#6B6039" style-hover="color:#5C7A32">← ALL RESEARCH</a>
+      <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;color:#5C7A32;margin:26px 0 14px">WATT AI · MEDIA FORENSICS HUB · CLEMSON UNIVERSITY · 2025</p>
+      <h1 style="font-size:27px;font-weight:600;line-height:1.18;letter-spacing:-0.015em;margin:0 0 18px">Frame Extraction and Labelling of Social Media Posts</h1>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:30px">
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#5F5643;border:1px solid #D2CDB4;padding:5px 9px">MULTIMODAL LLMS</span>
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#5F5643;border:1px solid #D2CDB4;padding:5px 9px">EMBEDDINGS</span>
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#5F5643;border:1px solid #D2CDB4;padding:5px 9px">CLUSTERING</span>
+      </div>
+      <div style="background:#EAE6D4;border:1px solid #DBD5BC;margin-bottom:32px">
+        <img src="poster-social-media.png" alt="Social media frame extraction research poster" style="display:block;width:100%;height:auto" />
+      </div>
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#5C7A32;font-weight:500;margin:0 0 12px">OVERVIEW</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty">This project investigates how meaning and influence are constructed across social media text and video by modeling what core message audiences are meant to take away. It covers three related tasks: <span style="font-weight:600">extracting the main idea from short-form videos</span> using transcripts and video-aware LLMs, standardizing noisy or inconsistent person names into coherent entities, and building user-level profiles that summarize what each account communicates over time.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">Together these turn raw social media content into structured representations of messages, people, and communities, supporting analysis of online narratives, coordination, and information flows.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#5C7A32;font-weight:500;margin:0 0 12px">METHOD</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty"><span style="font-weight:600">Multimodal frame extraction.</span> A pipeline analyzes each video under three conditions (visuals only, visuals plus transcript, and visuals plus transcript plus speaker labels) so the contribution of each modality can be measured directly, and information gain is computed from semantic similarity between conditions using sentence embeddings.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0 0 12px;color:#332F26;text-wrap:pretty"><span style="font-weight:600">Name standardization.</span> BGE-Large embeddings place semantically similar names near each other and are clustered by cosine similarity; Double Metaphone phonetic codes and Levenshtein distance then catch misspellings, abbreviations, and title variations, with small clusters merged where semantic and phonetic similarity agree.</p>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty"><span style="font-weight:600">User modeling.</span> gpt-oss-20b summarizes each user's posts, summaries are embedded with bge-large-en-v1.5, and the resulting clusters are compared against human thematic groupings to assess how well the LLM captures what an account is actually doing.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#5C7A32;font-weight:500;margin:0 0 12px">KEY RESULTS</h2>
+          <div data-stats="true" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:14px">
+            <div><div style="font-size:24px;font-weight:500;line-height:1;margin-bottom:6px">154</div><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:#7A6F53">VIDEOS EVALUATED</div></div>
+            <div><div style="font-size:24px;font-weight:500;line-height:1;margin-bottom:6px">46.8%</div><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:#7A6F53">GAINED FROM SPEAKER LABELS</div></div>
+            <div><div style="font-size:24px;font-weight:500;line-height:1;margin-bottom:6px">14.9%</div><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:#7A6F53">HIGH GAIN · >50%</div></div>
+          </div>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">Across 154 videos, speaker labels were redundant for 53.2% (minimal gain under 15%), helpful context for 29.2%, important for 2.6%, and critical to understanding for 14.9%, so attribution matters for a meaningful minority of clips rather than uniformly.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#5C7A32;font-weight:500;margin:0 0 12px">MY ROLE</h2>
+          <p style="font-size:16.5px;line-height:1.72;margin:0;color:#332F26;text-wrap:pretty">First author on the poster, presented through Clemson's Watt AI program with the Media Forensics Hub. Co-authors: Levi Bates, Ameya Chaudhari, Ruoyu Yang, Fanchen Meng.</p>
+        </section>
+        <section>
+        <h2 style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#5C7A32;font-weight:500;margin:0 0 12px">FULL POSTER</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em">
+            <a href="poster-social-media.pdf" style="text-decoration:none;border:1px solid #1F5C99;padding:6px 11px" style-hover="background:#1F5C99;color:#F6F2E4">OPEN PDF</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+  <div style="width:100%;max-width:760px;box-sizing:border-box;background:#1F5C99;box-shadow:0 12px 26px rgba(24,50,72,0.22);padding:16px 56px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;color:#FFFAEC">
+    <span>NIMRA NAYYAR · CLEMSON, SC</span>
+    <span style="display:flex;gap:16px">
+      <a href="https://github.com/nimnay" style="color:#FFFAEC;text-decoration:none" style-hover="color:#FBD9A2">GITHUB</a>
+      <a href="https://linkedin.com/in/nimranayyar" style="color:#FFFAEC;text-decoration:none" style-hover="color:#FBD9A2">LINKEDIN</a>
+      <a href="mailto:nimranayyar05@gmail.com" style="color:#FFFAEC;text-decoration:none" style-hover="color:#FBD9A2">EMAIL</a>
+    </span>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { route: 'home' };
+
+  go(route, section) {
+    return (e) => {
+      if (e) e.preventDefault();
+      const same = this.state.route === route;
+      this.setState({ route }, () => {
+        if (section) {
+          const el = document.getElementById(section);
+          if (el) window.scrollTo({ top: el.offsetTop - 56, behavior: same ? 'smooth' : 'auto' });
+        } else {
+          window.scrollTo({ top: 0, behavior: same ? 'smooth' : 'auto' });
+        }
+      });
+    };
+  }
+
+  renderVals() {
+    const r = this.state.route;
+    return {
+      isHome: r === 'home',
+      isVantage: r === 'vantage',
+      isTd: r === 'td',
+      isPromptpact: r === 'promptpact',
+      isPosterAudiogram: r === 'poster-audiogram',
+      isPosterSocial: r === 'poster-social',
+      goHome: this.go('home'),
+      goWork: this.go('home', 'work'),
+      goResearch: this.go('home', 'research'),
+      goWriting: this.go('home', 'writing'),
+      goAbout: this.go('home', 'about'),
+      goVantage: this.go('vantage'),
+      goTd: this.go('td'),
+      goPromptpact: this.go('promptpact'),
+      goPosterAudiogram: this.go('poster-audiogram'),
+      goPosterSocial: this.go('poster-social')
+    };
+  }
+}
+</script>
+</body>
+</html>
